@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Security;
 
 namespace Ucu.Poo.Restaurant
 {
     public class Table
     {
-        private List<Dish> order = new List<Dish>();
         private string number;
         public string Number
         {
@@ -21,23 +21,27 @@ namespace Ucu.Poo.Restaurant
             this.Number= number;
             this.IsOccupied = false;
         }
+        private Order myorder;
         public void Occupy()
         {
             this.IsOccupied = true;
+            myorder = new Order() ;
+        }
+        public void AddToOrder(Dish dish)
+        {
+             myorder.AddToOrder(dish);
         }
         public void Free()
         {
             this.IsOccupied= false;
-            order.Clear();
         }
-        public void AddToOrder(Dish dish)
-        {
-             order.Add(dish);
-        }
-
         public bool HasOrders()
         {
-            return this.order.Count > 0;
+            if (myorder != null)
+            {
+                return true;
+            }
+            return false ;
         }
     }
 }
