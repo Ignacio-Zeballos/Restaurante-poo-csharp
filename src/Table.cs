@@ -2,6 +2,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Security;
 
+///Reprsentación de una mesa en el restaurante,
+/// tiene numero de mesa, informacion si esta ocupada o libre y metodos para ocupar/liberar la mesa.
+/// cumple con SRP porque solo maneja la informacion y el estado de una mesa
+
 namespace Ucu.Poo.Restaurant
 {
     public class Table

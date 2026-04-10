@@ -1,5 +1,9 @@
 using System.Collections.Generic;
 
+///Representación de un mozo del restaurante,
+/// tiene informacion como su nombre y una mesa asignada,
+/// puede tomar pedidos o asignar mesas.
+/// Cumple con SRP porque solo maneja las responsabilidade asociadas a un mozo.
 namespace Ucu.Poo.Restaurant
 {
     public class Waiter

@@ -1,5 +1,9 @@
 using System.Reflection.Metadata.Ecma335;
 
+///Representa un platillo del restaurante,
+/// tiene información de su nombre, precio y si es vegetariano o no,
+/// cumple con SRP, ya que solo se encarga de modelar platillos con sus datos.
+
 namespace Ucu.Poo.Restaurant
 {
     public class Dish
